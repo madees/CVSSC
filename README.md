@@ -14,8 +14,9 @@ Build in Eurorack standard (IEC 60297 aka DIN 41494, cf https://sdiy.info/wiki/E
 * Display for actual memory/scene or XY pad object ID
 * Rotary encoder with push to select memory/scene or XY pad object ID
 * Previous, Next, Recall scenes buttons
+* Integrated web interface to setup the OSC mappings and configurations
 
-Gain will change the amplitude of the sound object displacement, Offset its center position (or static manual position).
+CV input Gain pot will change the amplitude of the sound object displacement, Offset pot its center position (or static manual position).
 
 ## Hardware design
 The module is based on Arduino Yun device. https://store.arduino.cc/arduino-yun
