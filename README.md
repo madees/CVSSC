@@ -4,7 +4,7 @@ Voltage Controlled to OSC d&amp;b Soundscape controller
 12/2020 : UNDER CONSTRUCTION
 
 ## What for ?
-This is a "no computer" interface to control d&b Soundscape sound objects.
+This is a "no computer" interface to control d&b Soundscape sound objects. https://www.dbsoundscape.com/global/en/system-profile/en-scene/
 
 ## How ?
 It converts CV inputs (analog control voltage) to OSC messages, tailored for d&b DS100 En-Scene audio spatializer.
