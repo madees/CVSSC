@@ -42,8 +42,8 @@ The circuit for PCB board has been designed with KiCad. https://kicad.org/
 * 1x TRILL XY Pad https://shop.bela.io/collections/trill/products/trill-square
 * 1x CVSSC PCB board
 * 1x aluminium Eurorack ?U front panel
-* 
-* ICs R C connectors to be continued (KiCAD)
+* ...
+* ICs R C connectors etc. to be continued form KiCAD BOM
 
 ## Software design
 The Arduino code manages ADC and all the hardware of the module.
