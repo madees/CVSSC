@@ -9,6 +9,8 @@ As Arduino Yun is discountinued, I've aborted this solution. Instead, I did it w
 ## What for ?
 This is a "no computer" or "daw less" interface to control d&b Soundscape En-Scene sound objects from Eurorack analog modular synth modules. https://www.dbsoundscape.com/global/en/system-profile/en-scene/
 
+This community module is NOT OFFICIALLY supported by d&b audiotechnik. It is publicly available to enable interested users to experiment, extend and create their own adaptations. There is no guarantee for compatibility inbetween versions or for the implemented functionality to be reliable for professional. Use what is provided here at your own risk!
+
 ## How ?
 It converts CV inputs (analog control voltage) to OSC messages, tailored for d&b DS100 En-Scene audio spatializer.
 Build in Eurorack standard (IEC 60297 aka DIN 41494, cf https://sdiy.info/wiki/Eurorack), it includes :
