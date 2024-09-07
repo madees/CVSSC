@@ -1,5 +1,5 @@
 # CVSSC
-Voltage Controlled to OSC
+Voltage Controlled to OSC Eurorack module
 
 3/2021 : As Arduino Yun is discountinued, I've aborted this solution. Instead, I did it with a RPI HAT, and this RPI is using Chataigne embended to map OSC to DS100. see https://github.com/madees/DAQC2-Chataigne-Module
 
