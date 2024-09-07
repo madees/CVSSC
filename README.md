@@ -1,9 +1,8 @@
 # CVSSC
 Voltage Controlled to OSC d&amp;b Soundscape controller
 
-12/2020 : UNDER CONSTRUCTION
-
-3/2021 : PROJECT ABORTED, move to Raspberry Pi and DAQC2 HAT, see https://github.com/madees/DAQC2-Chataigne-Module
+3/2021 : project stopped with this Yun idea, move to Raspberry Pi and DAQC2 HAT, see https://github.com/madees/DAQC2-Chataigne-Module
+1/2024 : third step, now the active project is https://github.com/madees/asynth2osc
 As Arduino Yun is discountinued, I've aborted this solution. Instead, I did it with a RPI HAT, and this RPI is using Chataigne embended to map OSC to DS100.
 
 ## What for ?
