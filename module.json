@@ -1,0 +1,332 @@
+{
+	"name": "Greenut",
+	"type": "OSC",
+	"path": "Hardware",
+	
+	"version": "1.0",
+	"description": "Module to control a Greenut by OSC.\n\nPlease visit https:/\n\nChataigne Module specific documentation can be found in the README on GitHub:",
+	"url": "https://github.com/madees/Greenut-Chataigne-Module",
+	"downloadURL": "https://github.com/madees/Greenut-Chataigne-Module/archive/master.zip",
+	
+	"hasInput": true,
+	"hasOutput": true, 
+	"hideDefaultCommands": false,
+	"hideDefaultParameters": [
+		"autoRange",
+		"autoFeedback",
+		"useHierarchy",
+		"colorSendMode"
+	],
+	
+	"defaults": {
+		"autoAdd": false,
+		"oscInput": {
+			"localPort": 50051
+		},
+		"OSC Outputs": {
+			"OSC Output": {
+				"local": true,
+				"remoteHost": "127.0.0.1",
+				"remotePort": 50052
+			}
+		}
+	},
+	"scripts": [
+		"Greenut-osc.js"
+	],
+	
+	"values": {
+		"Click to ping Greenut":
+			{
+				"type":"Trigger",
+				"description":"Check if Greenup OSC client and server are up and running.\n"
+			},
+		"Is there anybody out there":
+			{
+				"type":"Boolean",
+				"description":"Greenup OSC client and server are up and running.\n"
+			},
+		"CV inputs (volts)":
+			{
+				"type":"Container",
+				"CV In 1":
+				{
+				"type":"Float",
+				"min":-12,
+				"max":12
+				},
+			"CV In 2":
+				{
+				"type":"Float",
+				"min":-12,
+				"max":12
+				},
+			"CV In 3":
+				{
+				"type":"Float",
+				"min":-12,
+				"max":12
+				},
+			"CV In 4":
+				{
+				"type":"Float",
+				"min":-12,
+				"max":12
+				},
+			"CV In 5":
+				{
+				"type":"Float",
+				"min":-12,
+				"max":12
+				},
+			"CV In 6":
+				{
+				"type":"Float",
+				"min":-12,
+				"max":12
+				},
+			"CV In 7":
+				{
+				"type":"Float",
+				"min":-12,
+				"max":12
+				},
+			"CV In 8":
+				{
+				"type":"Float",
+				"min":-12,
+				"max":12
+				}
+			},
+		"Frequency input":
+		{
+			"type":"Float",
+			"min":1,
+			"max":150000
+		},
+		"Triggers inputs":
+		{
+			"type":"Container",
+			"D In 1":
+			{
+				"type":"Boolean"
+			},
+			"D In 2":
+			{
+				"type":"Boolean"
+			},
+			"D In 3":
+			{
+				"type":"Boolean"
+			},
+			"D In 4":
+			{
+				"type":"Boolean"
+			},
+			"D In 5":
+			{
+				"type":"Boolean"
+			},
+			"D In 6":
+			{
+				"type":"Boolean"
+			},
+			"D In 7":
+			{
+				"type":"Boolean"
+			},
+			"D In 8":
+			{
+				"type":"Boolean"
+			}
+			
+		},
+		"HUI":
+		{
+			"type":"Container",
+			"Encoder":
+			{
+				"type":"Integer",
+				"description":"Raw rotary encoder value.\n"
+			},
+			"Push":
+			{
+				"type":"Boolean",
+				"description":"State of rotary encoder button.\n"
+			},
+			"String to Scene major.minor index":
+			{
+				"type":"String",
+				"description":"Little helper to convert scene string to following pair of integers.\n"
+			},
+			"Major index integer":
+			{
+				"type":"Integer",
+				"description":"Derived from left part of string above.\n",
+				"min":0,
+				"max":999
+			},
+			"Minor index integer":
+			{
+				"type":"Integer",
+				"description":"Derived from right part of string above.\n",
+				"min":0,
+				"max":99
+			},
+			"String to display":
+			{
+				"type":"String",
+				"description":"Little helper to convert back those two integers above in a string.\n"
+			},
+			"Display brightness":
+			{
+				"type":"Float",
+				"description":"Set brightness from 0 to 1 by 1/16th steps.\n",
+				"min":0,
+				"max":1
+			}
+		} 
+		
+	},
+			
+	"commands": 
+	{
+		"print":
+		{
+			"menu":"",
+			"callback":"txPrint",
+			"description":"Send static text to quad alphanumeric dispaly.\n",
+			"parameters":
+			{
+				"4 characters":
+				{
+					"type":"String"
+			}
+			}
+		},
+		"message":
+		{
+			"menu":"",
+			"callback":"txMessage",
+			"description":"Send scrolling text to quad alphanumeric dispaly.\n",
+			"parameters":
+			{
+				"Text":
+				{
+					"type":"String"
+				}
+			}
+		},
+		"ping":
+		{
+			"menu":"",
+			"callback":"txPing",
+			"description":"Send a ping. Should receive pong.\n",
+			"parameters":
+			{
+			}
+		},
+		
+		"getDIN":
+		{
+			"menu":"",
+			"callback":"getDIN",
+			"description":"get all DIN states.\n",
+			"parameters":
+			{
+			}
+		},
+		
+		"intEnable":
+		{
+			"menu":"",
+			"callback":"intEnable",
+			"description":"Enable interrupts on DIN.\n",
+			"parameters":
+			{
+			}
+		},
+		
+		"intDisable":
+		{
+			"menu":"",
+			"callback":"intDisable",
+			"description":"Disable interrupt on DIN.\n",
+			"parameters":
+			{
+			}
+		},
+
+		"DOut":
+		{
+			"menu":"",
+			"callback":"txDOut",
+			"description":"Set Digital Out state.\n",
+			"parameters":
+			{
+				"Channel":
+				{
+					"type":"Integer",
+					"min":0,
+					"max":7
+				},
+				"State":
+				{
+					"type":"Boolean"
+				}
+			}
+		},
+		
+		"AOut":
+		{
+			"menu":"",
+			"callback":"txAOut",
+			"description":"Set Analog Out voltage.\n",
+			"parameters":
+			{
+				"Channel":
+				{
+					"type":"Integer",
+					"min":1,
+					"max":4
+				},
+				"Voltage":
+				{
+					"type":"Float",
+					"min":0,
+					"max":4.095
+				}
+			}
+		},	
+
+		"Color LED":
+		{
+			"menu":"",
+			"callback":"txLED",
+			"description":"Set RGB LED color.\n",
+			"parameters":
+			{
+				"Color":
+				{
+					"type":"Color"
+				}
+			}
+		},
+		
+		"Display Blink Rate":
+		{
+			"menu":"",
+			"callback":"displayBlinkRate",
+			"description":"Set blink rate from 0 to 3 1/4th steps.\n",
+			"parameters":
+			{
+				"Rate":
+				{
+					"type":"Integer",
+					"min":0,
+					"max":3
+				}
+			}
+		}
+	}
+}
