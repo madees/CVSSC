@@ -5,6 +5,8 @@ Voltage Controlled to OSC Eurorack module
 
 1/2024 : third step, now the active project is https://github.com/madees/asynth2osc
 
+2026 : Fourth step, now on https://everedero.github.io/asynth2osc
+
 
 
 ## What for ?
